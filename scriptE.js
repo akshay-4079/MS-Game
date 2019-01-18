@@ -45,12 +45,20 @@ function placeRandomMine(minefield) {
     var column = Math.round(Math.random() * 8);
     var spot = getSpot(minefield, row, column);
     spot.content = "mine";
+    var count=0;
+   count++;
+return count;
 }
 
+
 function placeManyRandomMines(minefield) {
+    var j=0;
     for(var i = 0; i < 10; i++) {
+        j++;
         placeRandomMine(minefield);
+    
     }
+    return j
 }
 
 function calculateNumber(minefield, row, column) {
@@ -165,6 +173,7 @@ function MinesweeperController($scope) {
     $scope.minefield = createMinefield();
     var bgm=new sound("Bgm.mp3");
     var bom=new sound("Explosion+3.mp3");
+    $scope.new=$scope.minefield
     bgm.play();
        $scope.show=function(minefield)
             {

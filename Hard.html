@@ -11,7 +11,7 @@
     <div class="playarea"><h1 style="color: aliceblue;display:block;width: 100%;text-align: center">Hard Mode</h1>
   <div ng-controller="MinesweeperController">
          <a href="GUI.html" style="display: block;text-decoration: none;color: white;text-align: center">Go Back Home</a>
-    <h1 ng-if="isWinMessageVisible" style="color: aliceblue;font-size: :150px">You won!</h1>
+    <h1 ng-if="isWinMessageVisible&&!hasLostMessageVisible" style="color: aliceblue;font-size: :150px">You won!</h1>
     <h1 ng-if="hasLostMessageVisible" style="color: aliceblue;font-size: :150px;text-align: center">You Lost!<br><button ng-click="show(minefield)" >Show All</button><br><button ng-click="retry()">Try Again</button></h1>
     <table class="minefield">
         <tr ng-repeat="row in minefield.rows">

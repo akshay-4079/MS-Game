@@ -45,12 +45,17 @@ function placeRandomMine(minefield) {
     var column = Math.round(Math.random() * 8);
     var spot = getSpot(minefield, row, column);
     spot.content = "mine";
+    var count=1;
+    return count;
 }
 
 function placeManyRandomMines(minefield) {
+   j=0;
     for(var i = 0; i < 25; i++) {
+       j++;
         placeRandomMine(minefield);
     }
+return j;
 }
 
 function calculateNumber(minefield, row, column) {
